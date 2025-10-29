@@ -1,0 +1,29 @@
+Windows Registry Editor Version 5.00
+
+; Register Script Runner Pro file associations
+; This file can be imported to associate script files with Script Runner Pro
+
+[HKEY_CLASSES_ROOT\.py\shell\ScriptRunnerPro]
+@="Run with Script Runner Pro"
+
+[HKEY_CLASSES_ROOT\.py\shell\ScriptRunnerPro\command]
+@="\"C:\\Program Files\\Script Runner Pro\\ScriptRunnerPro.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\.ps1\shell\ScriptRunnerPro]
+@="Run with Script Runner Pro"
+
+[HKEY_CLASSES_ROOT\.ps1\shell\ScriptRunnerPro\command]
+@="\"C:\\Program Files\\Script Runner Pro\\ScriptRunnerPro.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\.bat\shell\ScriptRunnerPro]
+@="Run with Script Runner Pro"
+
+[HKEY_CLASSES_ROOT\.bat\shell\ScriptRunnerPro\command]
+@="\"C:\\Program Files\\Script Runner Pro\\ScriptRunnerPro.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\.cmd\shell\ScriptRunnerPro]
+@="Run with Script Runner Pro"
+
+[HKEY_CLASSES_ROOT\.cmd\shell\ScriptRunnerPro\command]
+@="\"C:\\Program Files\\Script Runner Pro\\ScriptRunnerPro.exe\" \"%1\""
+
