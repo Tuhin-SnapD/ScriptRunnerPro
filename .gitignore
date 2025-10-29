@@ -21,7 +21,7 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MAN drainageIFEST
+MANIFEST
 
 # PyInstaller
 *.manifest

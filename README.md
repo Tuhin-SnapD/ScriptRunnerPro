@@ -69,50 +69,57 @@ A modern, feature-rich script management and execution tool designed specificall
    cd ScriptRunnerPro
    ```
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the application**
-   ```bash
-   python script-runner-gui.py
-   ```
-   
-   Or use the provided batch file:
+2. **Run the application** (Everything in one go!)
    ```bash
    run.bat
    ```
+   
+   This single batch file will:
+   - ✅ Create a virtual environment (venv) if it doesn't exist
+   - ✅ Activate the virtual environment
+   - ✅ Install/upgrade all dependencies automatically
+   - ✅ Launch Script Runner Pro
 
 ### Installation Methods
 
-#### Option 1: Using pip (Recommended)
+#### Option 1: Using run.bat (Recommended - Easiest)
+Simply double-click `run.bat` or run:
 ```bash
+run.bat
+```
+
+This automatically handles:
+- Virtual environment creation
+- Dependency installation
+- Application launch
+
+#### Option 2: Manual Installation
+If you prefer manual setup:
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run the application
 python script-runner-gui.py
 ```
 
-#### Option 2: Install as Package
+#### Option 3: Install as Package
 ```bash
 pip install -e .
 python -m script_runner_gui
 ```
 
-#### Option 3: Using Install Script
-Run the provided installation script:
-```bash
-install.bat
-```
-
-This will:
-- Install all dependencies
-- Optionally create a desktop shortcut
-- Set up the application for easy access
-
 ## 🎯 Quick Start
 
 1. **Launch the Application**
-   - Run `python script-runner-gui.py` or double-click `run.bat`
+   - Double-click `run.bat` (handles venv, dependencies, and launch automatically)
+   - Or manually run `python script-runner-gui.py` after setting up venv
 
 2. **Add Your First Script**
    - Click "Add New Script" or press `Ctrl+N`
@@ -239,30 +246,30 @@ python script-runner-gui.py
    pyinstaller --onefile --windowed --name "ScriptRunnerPro" --icon=script-runner-icon.png script-runner-gui.py
    ```
 
-3. Or use the provided build script:
-   ```bash
-   build.bat
-   ```
-
 The executable will be created in the `dist` folder.
+
+**Note:** Make sure to activate your virtual environment first:
+```bash
+venv\Scripts\activate
+```
 
 ### Creating Windows Installer
 
 **Using cx_Freeze:**
 
-1. Install cx_Freeze:
+1. Activate your virtual environment:
+   ```bash
+   venv\Scripts\activate
+   ```
+
+2. Install cx_Freeze:
    ```bash
    pip install cx_Freeze
    ```
 
-2. Build installer:
+3. Build installer:
    ```bash
    python create_installer.py build
-   ```
-
-3. Or use the provided installer script:
-   ```bash
-   build_installer.bat
    ```
 
 ### File Associations (Optional)
@@ -292,11 +299,8 @@ ScriptRunnerPro/
 ├── requirements.txt              # Python dependencies
 ├── setup.py                      # Package configuration
 ├── scripts.json                  # Script database (user data, gitignored)
-├── build.bat                     # Build executable script
-├── install.bat                   # Installation script
-├── run.bat                       # Quick run script
-├── build_installer.bat           # Create Windows installer
-├── create_installer.py           # cx_Freeze configuration
+├── run.bat                       # All-in-one script (venv, install, run)
+├── create_installer.py           # cx_Freeze configuration (optional)
 ├── ScriptRunnerPro.reg           # File associations (optional)
 └── README.md                     # This file
 ```
