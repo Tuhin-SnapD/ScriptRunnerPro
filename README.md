@@ -243,7 +243,7 @@ python script-runner-gui.py
 
 2. Build executable:
    ```bash
-   pyinstaller --onefile --windowed --name "ScriptRunnerPro" --icon=script-runner-icon.png script-runner-gui.py
+   pyinstaller --onefile --windowed --name "ScriptRunnerPro" script-runner-gui.py
    ```
 
 The executable will be created in the `dist` folder.
@@ -295,7 +295,6 @@ ScriptRunnerPro/
 │   ├── system_info.ps1           # PowerShell demo
 │   └── file_operations.bat       # Batch demo
 ├── landing.png                   # Application screenshot/landing image
-├── script-runner-icon.png        # Application icon
 ├── requirements.txt              # Python dependencies
 ├── setup.py                      # Package configuration
 ├── scripts.json                  # Script database (user data, gitignored)

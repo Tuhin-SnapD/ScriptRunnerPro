@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QHBoxLayout
                             QMessageBox, QSplitter, QListWidget, QListWidgetItem,
                             QGroupBox, QGridLayout, QScrollArea, QFrame, QSizePolicy)
 from PyQt5.QtCore import Qt, QMimeData, QThread, pyqtSignal, QTimer
-from PyQt5.QtGui import QFont, QIcon, QPixmap, QPalette, QColor
+from PyQt5.QtGui import QFont, QPixmap, QPalette, QColor
 
 class ScriptExecutionThread(QThread):
     output_ready = pyqtSignal(str)
@@ -543,9 +543,6 @@ if __name__ == '__main__':
     app.setApplicationName("Script Runner Pro")
     app.setApplicationVersion("2.0")
     
-    # Set application icon if available
-    if os.path.exists('script-runner-icon.png'):
-        app.setWindowIcon(QIcon('script-runner-icon.png'))
     
     ex = ScriptRunnerGUI()
     ex.show()

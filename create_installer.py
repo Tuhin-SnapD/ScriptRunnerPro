@@ -13,7 +13,6 @@ build_exe_options = {
     "excludes": ["tkinter", "unittest", "pydoc", "doctest"],
     "include_files": [
         ("scripts.json", "scripts.json"),
-        ("script-runner-icon.png", "script-runner-icon.png"),
     ],
     "optimize": 2,
 }
@@ -29,7 +28,6 @@ executables = [
         "script-runner-gui.py",
         base=base,
         target_name="ScriptRunnerPro.exe",
-        icon="script-runner-icon.png" if os.path.exists("script-runner-icon.png") else None,
     )
 ]
 

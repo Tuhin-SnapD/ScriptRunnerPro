@@ -17,16 +17,10 @@ def main():
     
     from script_runner_gui import ScriptRunnerGUI
     from PyQt5.QtWidgets import QApplication
-    from PyQt5.QtGui import QIcon
     
     app = QApplication(sys.argv)
     app.setApplicationName("Script Runner Pro")
     app.setApplicationVersion(__version__)
-    
-    # Set application icon if available
-    icon_path = os.path.join(parent_dir, 'script-runner-icon.png')
-    if os.path.exists(icon_path):
-        app.setWindowIcon(QIcon(icon_path))
     
     ex = ScriptRunnerGUI()
     ex.show()
